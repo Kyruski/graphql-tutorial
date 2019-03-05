@@ -1,3 +1,6 @@
+const { buildSchema } = require("graphql");
+
+const schema: string = buildSchema(`
 type Query {
   info: String!
   feed: [Link!]!
@@ -12,3 +15,6 @@ type Link {
   description: String!
   url: String!
 }
+`);
+
+module.exports = schema;
